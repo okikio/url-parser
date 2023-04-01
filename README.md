@@ -5,9 +5,10 @@ wasm-pack build --target web
 ```
 
 ```sh
-deno run -A pkg/test.mjs
+deno run -A run.js
+deno run -A run-with-compressed-wasm.js
 ```
 
 ```sh
-deno run -A pkg/build.ts
+deno run -A scripts/build.ts
 ```

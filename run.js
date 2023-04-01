@@ -1,4 +1,4 @@
-import init, { new_url, set_pathname_url, get_host_url } from "./hello_wasm.js";
+import init, { new_url, set_pathname_url, get_host_url, get_origin } from "./pkg/hello_wasm.js";
 
 await init();
 const url_id = new_url("http://google.com:80\\\\@yahoo.com/");
