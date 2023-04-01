@@ -11,6 +11,7 @@ edition = "2018"
 crate-type = ["cdylib"]
 
 [dependencies]
+lazy_static = "1.4.0"
 serde = { version = "1.0.159", features = ["derive"] }
 serde-wasm-bindgen = "0.4"
 url = "2.3.1"
