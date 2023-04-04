@@ -365,8 +365,8 @@ export interface InitOutput {
   readonly set_query_pairs: (a: number, b: number, c: number, d: number, e: number) => void;
   readonly set_query_pairs_url: (a: number, b: number, c: number, d: number) => void;
   readonly get_hostname_url: (a: number, b: number) => void;
-  readonly set_hostname_url: (a: number, b: number, c: number, d: number) => void;
   readonly get_hostname: (a: number, b: number, c: number) => void;
+  readonly set_hostname_url: (a: number, b: number, c: number, d: number) => void;
   readonly set_hostname: (a: number, b: number, c: number, d: number, e: number) => void;
   readonly __wbindgen_malloc: (a: number) => number;
   readonly __wbindgen_realloc: (a: number, b: number, c: number) => number;

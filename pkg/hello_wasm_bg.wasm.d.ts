@@ -54,8 +54,8 @@ export function set_username_url(a: number, b: number, c: number, d: number): vo
 export function set_query_pairs(a: number, b: number, c: number, d: number, e: number): void;
 export function set_query_pairs_url(a: number, b: number, c: number, d: number): void;
 export function get_hostname_url(a: number, b: number): void;
-export function set_hostname_url(a: number, b: number, c: number, d: number): void;
 export function get_hostname(a: number, b: number, c: number): void;
+export function set_hostname_url(a: number, b: number, c: number, d: number): void;
 export function set_hostname(a: number, b: number, c: number, d: number, e: number): void;
 export function __wbindgen_malloc(a: number): number;
 export function __wbindgen_realloc(a: number, b: number, c: number): number;

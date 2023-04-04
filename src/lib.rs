@@ -24,10 +24,10 @@ pub fn new_url(url: &str) -> Result<usize, JsValue> {
 }
 
 #[wasm_bindgen]
-pub fn parse_url(url: &str) -> Result<String, JsValue> {
+pub fn parse_url(url: &str) -> Result<String, JsError> {
     let parsed_url: Url = url
         .parse()
-        .map_err(|e| JsValue::from_str(&format!("Failed to parse URL: {}", e)))?;
+        .map_err(|e| JsError::new(&format!("Failed to parse URL: {}", e)))?;
     Ok(parsed_url.to_string())
 }
 
@@ -44,11 +44,11 @@ pub fn parse(index: usize) -> Result<String, JsError> {
 }
 
 #[wasm_bindgen]
-pub fn get_host(url: &str) -> Result<String, JsValue> {
-    let parsed_url = Url::parse(url).map_err(|e| JsValue::from_str(&format!("{}", e)))?;
+pub fn get_host(url: &str) -> Result<String, JsError> {
+    let parsed_url = Url::parse(url).map_err(|e| JsError::new(&format!("{}", e)))?;
     let host = parsed_url
         .host_str()
-        .ok_or_else(|| JsValue::from_str("No host found"))?;
+        .ok_or_else(|| JsError::new("No host found"))?;
     Ok(host.to_string())
 }
 
@@ -69,7 +69,7 @@ pub fn get_host_url(index: usize) -> Result<String, JsError> {
 }
 
 #[wasm_bindgen]
-pub fn get_hostname(url: &str) -> Result<String, JsValue> {
+pub fn get_hostname(url: &str) -> Result<String, JsError> {
     get_host(url)
 }
 

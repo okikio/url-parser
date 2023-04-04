@@ -14,6 +14,7 @@ console.log({
 // await init();
 
 const cs = new CompressionStream('gzip');
+
 const uint8arr = await Deno.readFile(filePath);
 const compressedStream = new Blob([uint8arr.buffer]).stream().pipeThrough(cs);
 const utf8 = new Uint8Array(await new Response(compressedStream).arrayBuffer()); // compress(uint8arr, 22);
